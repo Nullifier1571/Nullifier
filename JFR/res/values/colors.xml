@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_green">#01CDAC</color>
+    <color name="color_orange">#FB7132</color>
+    <color name="color_blue">#00CCFF</color>
+    <color name="color_pager">#F5F5F5</color>
+    <color name="color_gary">#D2D2D2</color>
+    <color name="color_text_orange">#F9B956</color>
+    <color name="color_text_gray">#626061</color>
+
+</resources>

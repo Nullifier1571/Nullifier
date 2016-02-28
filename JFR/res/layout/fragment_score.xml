@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_pager" >
+
+    <include
+        android:id="@+id/item_title"
+        layout="@layout/item_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/item_title" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/sc_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="140dp" />
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/sc_viewpager"
+                android:padding="10dp" />
+
+            <RelativeLayout
+                android:id="@+id/area_1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/indicator"
+                android:layout_marginTop="15dp"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:drawableLeft="@drawable/me_score"
+                    android:gravity="bottom"
+                    android:text="睿币100"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="20sp" />
+
+                <View
+                    android:id="@+id/verticl_1"
+                    style="@style/vertical_line"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/color_gary" />
+
+                <TextView
+                    android:id="@+id/score_tv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:drawableLeft="@drawable/me_message"
+                    android:gravity="bottom"
+                    android:text="兑换记录"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/area_2"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_below="@id/area_1"
+                android:layout_marginTop="15dp"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:id="@+id/score_today_new"
+                    android:layout_width="160dp"
+                    android:layout_height="90dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:drawableTop="@drawable/today_new_test"
+                    android:gravity="center_horizontal"
+                    android:text="今日新品"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/score_exchange_record"
+                    android:layout_width="160dp"
+                    android:layout_height="90dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:drawableTop="@drawable/electronic_business_test"
+                    android:gravity="center_horizontal"
+                    android:text="兑换记录"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/score_tv_exchange_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/area_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="限量兑换"
+                android:textColor="@color/color_text_gray"
+                android:textSize="20sp" />
+
+            <GridView
+                android:id="@+id/score_gv_exchange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/score_tv_exchange_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:horizontalSpacing="10dp"
+                android:listSelector="#ffffff"
+                android:numColumns="2"
+                android:verticalSpacing="5dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

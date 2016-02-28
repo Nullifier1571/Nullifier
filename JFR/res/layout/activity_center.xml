@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_pager" >
+
+    <RadioGroup
+        android:id="@+id/center_tab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/center_tab_home"
+            android:gravity="center"
+            android:text="首页" />
+
+        <RadioButton
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/center_tab_market"
+            android:gravity="center"
+            android:text="商城" />
+
+        <RadioButton
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/center_tab_guidance"
+            android:gravity="center"
+            android:text="导航" />
+
+        <RadioButton
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/center_tab_me"
+            android:gravity="center"
+            android:text="我" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/line"
+        style="@style/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_above="@id/center_tab"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/center_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/line"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>

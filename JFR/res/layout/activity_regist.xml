@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_pager" >
+
+    <include
+        android:id="@+id/item_title"
+        layout="@layout/item_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_title"
+        android:layout_marginTop="40dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#ffffff" >
+
+            <EditText
+                android:id="@+id/regist_ev_phone"
+                style="@style/edit_style"
+                android:inputType="phone"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/login_phone" />
+
+            <View
+                android:id="@+id/regist_line1"
+                style="@style/horizontal_line"
+                android:layout_below="@id/regist_ev_phone"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp" />
+
+            <EditText
+                android:id="@+id/regist_ev_password"
+                style="@style/edit_style"
+                android:layout_below="@id/regist_line1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:inputType="textPassword"
+                android:drawableLeft="@drawable/login_password" />
+
+            <View
+                android:id="@+id/regist_line2"
+                style="@style/horizontal_line"
+                android:layout_below="@id/regist_ev_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regist_line2" >
+
+                <EditText
+                    android:id="@+id/regist_ev_token"
+                    style="@style/edit_style"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:maxLength="5"
+                    android:drawableLeft="@drawable/login_auth" />
+
+                <Button
+                    android:id="@+id/regist_bt_get_token"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/regist_ev_token"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/selector_button_blue"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="8dp"
+                    android:text="获取验证码"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/regist_cb_accept_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/color_gary"
+            android:text="我已阅读并接受RUIFI用户协议"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/regist_bt_regist"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/regist_cb_accept_protocol"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape_button_orange"
+            android:text="立即注册"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+</RelativeLayout>

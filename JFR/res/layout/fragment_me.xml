@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_pager" >
+
+    <include
+        android:id="@+id/item_title"
+        layout="@layout/item_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_title" >
+
+        <RelativeLayout
+            android:id="@+id/rl_1"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#ffffff" >
+
+            <ImageView
+                android:id="@+id/me_iv_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/people" />
+
+            <TextView
+                android:id="@+id/me_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@id/me_iv_photo"
+                android:text="华国锋"
+                android:textColor="@color/color_text_gray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/me_tv_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/me_tv_name"
+                android:layout_below="@id/me_tv_name"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@id/me_iv_photo"
+                android:ellipsize="end"
+                android:maxWidth="150dp"
+                android:singleLine="true"
+                android:text="只有想不到没有做不到"
+                android:textColor="@color/color_text_gray"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/area_1"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/rl_1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:background="#ffffff" >
+
+            <TextView
+                android:id="@+id/tv_score_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/me_score"
+                android:gravity="bottom"
+                android:text="我的积分"
+                android:textColor="@color/color_text_gray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/me_tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_score_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:text="8888"
+                android:textColor="@color/color_text_orange"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/area_2"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/area_1"
+            android:layout_below="@id/rl_1"
+            android:layout_marginRight="15dp"
+            android:background="#ffffff" >
+
+            <TextView
+                android:id="@+id/tv_message_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/me_message"
+                android:gravity="bottom"
+                android:text="我的消息"
+                android:textColor="@color/color_text_gray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/me_tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_message_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:text="8888"
+                android:textColor="@color/color_text_orange"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/area_1"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="商城中心"
+                android:textSize="@dimen/content_text_size_middle" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/me_cellarrow" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_1"
+            style="@style/horizontal_line"
+            android:layout_width="340dp"
+            android:layout_below="@id/rl_2"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/rl_3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/line_1"
+            android:background="#ffffff" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="兑换中心"
+                android:textSize="@dimen/content_text_size_middle" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/me_cellarrow" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/rl_3"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:text="联系客服\n400-6666-331"
+                android:textSize="@dimen/content_text_size_middle" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/me_bt_logout"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/rl_4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/shape_button_orange"
+            android:text="退出登录"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+</RelativeLayout>
