@@ -25,9 +25,9 @@
             <EditText
                 android:id="@+id/regist_ev_phone"
                 style="@style/edit_style"
-                android:inputType="phone"
                 android:layout_centerHorizontal="true"
-                android:drawableLeft="@drawable/login_phone" />
+                android:drawableLeft="@drawable/login_phone"
+                android:inputType="phone" />
 
             <View
                 android:id="@+id/regist_line1"
@@ -42,8 +42,8 @@
                 android:layout_below="@id/regist_line1"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="6dp"
-                android:inputType="textPassword"
-                android:drawableLeft="@drawable/login_password" />
+                android:drawableLeft="@drawable/login_password"
+                android:inputType="textPassword" />
 
             <View
                 android:id="@+id/regist_line2"
@@ -63,8 +63,8 @@
                     style="@style/edit_style"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="2dp"
-                    android:maxLength="5"
-                    android:drawableLeft="@drawable/login_auth" />
+                    android:drawableLeft="@drawable/login_auth"
+                    android:maxLength="5" />
 
                 <Button
                     android:id="@+id/regist_bt_get_token"
@@ -90,8 +90,8 @@
             android:layout_below="@id/rl_1"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:textColor="@color/color_gary"
             android:text="我已阅读并接受RUIFI用户协议"
+            android:textColor="@color/color_gary"
             android:textSize="14sp" />
 
         <Button
@@ -100,7 +100,7 @@
             android:layout_height="40dp"
             android:layout_below="@id/regist_cb_accept_protocol"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/shape_button_orange"
+            android:background="@drawable/selector_button_orange"
             android:text="立即注册"
             android:textColor="#ffffff" />
     </RelativeLayout>

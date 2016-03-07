@@ -3,10 +3,12 @@ package com.itjfr.jfr.utils;
 import android.app.Activity;
 import android.util.Log;
 import android.widget.Toast;
+
 /**
  * 本类为日志输出系统
+ * 
  * @author Nullifier
- *
+ * 
  */
 public class LogUtils {
 
@@ -96,6 +98,12 @@ public class LogUtils {
 		}
 	}
 
+	/**
+	 * 弹出消息
+	 * 
+	 * @param activity
+	 * @param msg
+	 */
 	public static void toastMessage(final Activity activity, final String msg) {
 		if ("main".equals(Thread.currentThread().getName())) {
 			Toast.makeText(activity, msg, Toast.LENGTH_SHORT).show();

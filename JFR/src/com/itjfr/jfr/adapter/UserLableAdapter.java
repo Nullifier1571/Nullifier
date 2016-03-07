@@ -5,6 +5,7 @@ import java.util.List;
 import com.itjfr.jfr.R;
 import com.itjfr.jfr.domain.UserTag;
 import com.itjfr.jfr.utils.ResourceLoadTool;
+import com.itjfr.jfr.utils.UITool;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -30,7 +31,8 @@ public class UserLableAdapter extends AdapterTemplent<UserTag> {
 		if(convertView==null){
 			convertView = new TextView(context);
 		}
-		LayoutParams params=new LayoutParams(260,120);
+		//UITool.dip2px(context, 130)
+		LayoutParams params=new LayoutParams(UITool.dip2px(context, 110),UITool.dip2px(context, 45));
 		convertView.setLayoutParams(params);
 		TextView tv=(TextView)convertView;
 		tv.setText(list.get(position).getName());

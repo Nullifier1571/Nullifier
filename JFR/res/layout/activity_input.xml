@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_pager" >
+
+    <include
+        android:id="@+id/item_title"
+        layout="@layout/item_title" />
+
+    <EditText
+        android:id="@+id/input_et"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_edit_border"
+        android:gravity="top"
+        android:lines="5"
+        android:padding="5dp" />
+
+    <Button
+        android:id="@+id/input_commit"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/input_et"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/selector_button_orange"
+        android:text="确定"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

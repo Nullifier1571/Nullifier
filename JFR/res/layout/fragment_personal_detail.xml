@@ -222,8 +222,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:gravity="center_horizontal"
-        android:listSelector="#ffffff"
         android:horizontalSpacing="10dp"
+        android:listSelector="#ffffff"
         android:numColumns="3"
         android:verticalSpacing="5dp" />
 

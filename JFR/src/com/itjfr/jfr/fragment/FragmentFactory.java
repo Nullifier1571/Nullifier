@@ -8,6 +8,8 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 /**
  * 本工厂管理fragment保证所有的fragment为单例
@@ -132,6 +134,48 @@ public class FragmentFactory {
 	}
 
 	/**
+	 * 清楚所有的fragment
+	 */
+	public static void cleanAllFragment() {
+		if (settingFragment != null) {
+			settingFragment = null;
+		}
+
+		if (homeFragment != null) {
+			homeFragment = null;
+		}
+
+		if (guidanceFragment != null) {
+			guidanceFragment = null;
+		}
+
+		if (marketFragment != null) {
+			marketFragment = null;
+		}
+
+		if (meFragment != null) {
+			meFragment = null;
+		}
+
+		if (personDetailFragment != null) {
+			personDetailFragment = null;
+		}
+
+		if (scoreFragment != null) {
+			scoreFragment = null;
+		}
+
+		if (imageFragment != null) {
+			imageFragment = null;
+		}
+
+		if (cacheFragment != null) {
+			cacheFragment = null;
+		}
+
+	}
+
+	/**
 	 * 通过网络地址集合获取fragment集合，集合不唯一
 	 * 
 	 * @param type
@@ -199,6 +243,20 @@ public class FragmentFactory {
 		 * 图像
 		 */
 		IMAGE;
+	}
+
+	private static RadioGroup centerGroup;
+
+	public static void setCenterRadioGroup(RadioGroup group) {
+		centerGroup = group;
+	}
+
+	public static void cleanCenterRadioGroup() {
+		centerGroup = null;
+	}
+
+	public static RadioButton getCenterRadioButton(int index) {
+		return (RadioButton) centerGroup.getChildAt(index);
 	}
 
 }

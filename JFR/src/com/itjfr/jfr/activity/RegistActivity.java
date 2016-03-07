@@ -1,5 +1,7 @@
 package com.itjfr.jfr.activity;
 
+import java.io.File;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -126,7 +128,7 @@ public class RegistActivity extends Activity implements OnClickListener,
 				requestArgs.putString("mobile", phone);
 				requestArgs.putString("code", token);
 				requestArgs.putString("password", password);
-				httpTools.doPost(requestArgs, Config.USER_REGIST, 1);
+				httpTools.doPost(requestArgs, Config.USER_REGIST, 2);
 			} else {
 				LogUtils.toastMessage(this, "请输入正确的手机号码");
 			}
@@ -140,7 +142,7 @@ public class RegistActivity extends Activity implements OnClickListener,
 			if (InputCheckTool.isPhoneNumber(phoneNumber)) {
 				Bundle requestArgs = new Bundle();
 				requestArgs.putString("mobile", phoneNumber);
-				httpTools.doPost(requestArgs, Config.USER_REGIST_GET_TOKEN, 0);
+				httpTools.doPost(requestArgs, Config.USER_REGIST_GET_TOKEN, 1);
 				// 发送循环消息
 				handler.sendEmptyMessage(TIMER);
 				// 按钮不可点击
@@ -160,10 +162,11 @@ public class RegistActivity extends Activity implements OnClickListener,
 	}
 
 	@Override
-	public void getResultData(boolean isOk, String result, int Tag) {
+	public void getResultData(boolean isOk,int errorCode,String result, int Tag) {
 		switch (Tag) {
 		// 获取验证码
-		case 0:
+		case 1:
+			LogUtils.e("回到了RegistActivity中"+result);
 			if (!isOk) {
 				LogUtils.toastMessage(this, "获取验证码失败，请稍候重试");
 				return;
@@ -177,13 +180,22 @@ public class RegistActivity extends Activity implements OnClickListener,
 				e.printStackTrace();
 			}
 			break;
-		case 1:
-
+		case 2:
+			if (isOk) {
+				LogUtils.toastMessage(this, "注册成功");
+				finish();
+			}
 			break;
 		default:
 			break;
 		}
 
+	}
+
+	@Override
+	public void getDownLoadFile(boolean isOk, File file, int Tag) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

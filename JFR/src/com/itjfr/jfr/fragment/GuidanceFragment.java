@@ -1,5 +1,6 @@
 package com.itjfr.jfr.fragment;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +38,6 @@ public class GuidanceFragment extends BaseFragment implements
 	}
 
 	private void initData() {
-		// 如果内存中没有个人信息则初始化网络请求工具从网络中下载
 		httpTools = HttpTools.getHttpToolsInstance();
 		httpTools.setRequestNetListener(this);
 
@@ -52,9 +52,13 @@ public class GuidanceFragment extends BaseFragment implements
 			// result转换为list
 			guidanceAdapter = new GuidanceAdapter(list, getActivity());
 			guidance_gv.setAdapter(guidanceAdapter);
-			//guidanceAdapter.refresh(null);
-		}else{
-			guidanceAdapter.notifyDataSetChanged();
+			// guidanceAdapter.refresh(null);
+			LogUtils.e("GuidanceFragment initView()方法执行guidanceAdapter为空重新创建"
+					+ "list的大小" + list.size());
+		} else {
+			LogUtils.e("GuidanceFragment initView()方法执行guidanceAdapter不为空"
+					+ "list的大小" + list.size() + "gridView对象是否为空" + guidance_gv);
+			guidanceAdapter.refresh(list);
 		}
 		LogUtils.e("GuidanceFragment initData()方法执行" + list.size());
 	}
@@ -66,7 +70,8 @@ public class GuidanceFragment extends BaseFragment implements
 	}
 
 	@Override
-	public void getResultData(boolean isOk, String result, int Tag) {
+	public void getResultData(boolean isOk, int errorCode, String result,
+			int Tag) {
 		if (guidanceAdapter == null) {
 			List<GuidanceData> list = addSeller();
 			// result转换为list
@@ -193,5 +198,11 @@ public class GuidanceFragment extends BaseFragment implements
 		list.add(guidanceData15);
 
 		return list;
+	}
+
+	@Override
+	public void getDownLoadFile(boolean isOk, File file, int Tag) {
+		// TODO Auto-generated method stub
+
 	}
 }

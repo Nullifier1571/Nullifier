@@ -3,19 +3,24 @@ package com.itjfr.jfr.fragment;
 import java.util.ArrayList;
 
 import com.itjfr.jfr.R;
+import com.itjfr.jfr.view.ScrollViewExtend;
 import com.viewpagerindicator.CirclePageIndicator;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 /**
  * 分数页面
+ * 
  * @author Nullifier
- *
+ * 
  */
 public class ScoreFragment extends BaseFragment {
 	private GridView score_gv_exchange;
@@ -23,8 +28,9 @@ public class ScoreFragment extends BaseFragment {
 	private TextView tv_score;
 	private TextView score_tv_message;
 	private CirclePageIndicator mIndicator;
+	private ScrollViewExtend sv_score;
 	// private TestFragmentAdapter mAdapter;
-	//private ViewPagerFragmentAdapter myTestAdapter;
+	// private ViewPagerFragmentAdapter myTestAdapter;
 	private ViewPagerFragmentAdapter viewPagerAdapter;
 
 	@Override
@@ -32,7 +38,6 @@ public class ScoreFragment extends BaseFragment {
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_score, null);
 		initView(view);
-
 		return view;
 	}
 
@@ -42,17 +47,19 @@ public class ScoreFragment extends BaseFragment {
 		sc_viewpager = (ViewPager) view.findViewById(R.id.sc_viewpager);
 		tv_score = (TextView) view.findViewById(R.id.tv_score);
 		score_tv_message = (TextView) view.findViewById(R.id.score_tv_message);
+		sv_score = (ScrollViewExtend) view.findViewById(R.id.sv_score);
 		ArrayList<String> listImageUrl = new ArrayList<String>();
 		listImageUrl.add("1");
 		listImageUrl.add("2");
 		listImageUrl.add("3");
 		listImageUrl.add("4");
-		viewPagerAdapter = new ViewPagerFragmentAdapter(getFragmentManager(),listImageUrl);	
+		viewPagerAdapter = new ViewPagerFragmentAdapter(getFragmentManager(),
+				listImageUrl);
 		sc_viewpager.setAdapter(viewPagerAdapter);
 
 		mIndicator = (CirclePageIndicator) view.findViewById(R.id.indicator);
 		mIndicator.setViewPager(sc_viewpager);
 		mIndicator.setCurrentItem(viewPagerAdapter.getCount() - 1);
-		
 	}
+
 }

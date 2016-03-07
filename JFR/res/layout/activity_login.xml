@@ -54,7 +54,7 @@
             android:layout_below="@id/rl_2"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
-            android:background="@drawable/shape_button_orange"
+            android:background="@drawable/selector_button_orange"
             android:text="登录"
             android:textColor="#ffffff" />
 

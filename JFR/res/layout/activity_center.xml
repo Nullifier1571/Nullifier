@@ -13,6 +13,7 @@
         android:orientation="horizontal" >
 
         <RadioButton
+            android:id="@+id/rb_home"
             android:layout_width="30dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -22,6 +23,7 @@
             android:text="首页" />
 
         <RadioButton
+            android:id="@+id/rb_market"
             android:layout_width="30dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -31,6 +33,7 @@
             android:text="商城" />
 
         <RadioButton
+            android:id="@+id/rb_guide"
             android:layout_width="30dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -40,6 +43,7 @@
             android:text="导航" />
 
         <RadioButton
+            android:id="@+id/rb_me"
             android:layout_width="30dp"
             android:layout_height="60dp"
             android:layout_weight="1"

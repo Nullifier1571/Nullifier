@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <declare-styleable name="SwitchButton">
-        <attr name="frameDrawable" format="reference|color"/>
-        <attr name="stateDrawable" format="reference|color"/>
-        <attr name="stateMaskDrawable" format="reference|color"/>
-        <attr name="sliderDrawable" format="reference|color"/>
-	    <attr name="withTextInterval" format="dimension"/>
+        <attr name="frameDrawable" format="reference|color" />
+        <attr name="stateDrawable" format="reference|color" />
+        <attr name="stateMaskDrawable" format="reference|color" />
+        <attr name="sliderDrawable" format="reference|color" />
+        <attr name="withTextInterval" format="dimension" />
     </declare-styleable>
+
+    <string-array name="sex_array">
+        <item value="0">保密</item>
+        <item value="1">男</item>
+        <item value="2">女</item>
+    </string-array>
+
+    
 </resources>

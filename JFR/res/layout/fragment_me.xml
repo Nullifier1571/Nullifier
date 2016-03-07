@@ -21,11 +21,12 @@
 
             <ImageView
                 android:id="@+id/me_iv_photo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:src="@drawable/people" />
+         
 
             <TextView
                 android:id="@+id/me_tv_name"
@@ -38,14 +39,16 @@
                 android:textColor="@color/color_text_gray"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/me_tv_sign"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/me_ev_sign"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@id/me_tv_name"
                 android:layout_below="@id/me_tv_name"
                 android:layout_marginTop="6dp"
                 android:layout_toRightOf="@id/me_iv_photo"
+                android:background="@null"
+                android:cursorVisible="false"
                 android:ellipsize="end"
                 android:maxWidth="150dp"
                 android:singleLine="true"
@@ -54,82 +57,90 @@
                 android:textSize="18sp" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/area_1"
-            android:layout_width="160dp"
-            android:layout_height="100dp"
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@id/rl_1"
-            android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
-            android:background="#ffffff" >
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
 
-            <TextView
-                android:id="@+id/tv_score_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/me_score"
-                android:gravity="bottom"
-                android:text="我的积分"
-                android:textColor="@color/color_text_gray"
-                android:textSize="20sp" />
+            <RelativeLayout
+                android:id="@+id/area_1"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/rl_1"
+                android:layout_weight="1"
+                android:background="#ffffff" >
 
-            <TextView
-                android:id="@+id/me_tv_score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_score_title"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp"
-                android:gravity="bottom"
-                android:text="8888"
-                android:textColor="@color/color_text_orange"
-                android:textSize="25sp" />
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_score_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/me_score"
+                    android:gravity="bottom"
+                    android:text="我的积分"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="20sp" />
 
-        <RelativeLayout
-            android:id="@+id/area_2"
-            android:layout_width="160dp"
-            android:layout_height="100dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignTop="@id/area_1"
-            android:layout_below="@id/rl_1"
-            android:layout_marginRight="15dp"
-            android:background="#ffffff" >
+                <TextView
+                    android:id="@+id/me_tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_score_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="bottom"
+                    android:text="8888"
+                    android:textColor="@color/color_text_orange"
+                    android:textSize="25sp" />
+            </RelativeLayout>
 
-            <TextView
-                android:id="@+id/tv_message_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/me_message"
-                android:gravity="bottom"
-                android:text="我的消息"
-                android:textColor="@color/color_text_gray"
-                android:textSize="20sp" />
+            <RelativeLayout
+                android:id="@+id/area_2"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#ffffff" >
 
-            <TextView
-                android:id="@+id/me_tv_message"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_message_title"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp"
-                android:gravity="bottom"
-                android:text="8888"
-                android:textColor="@color/color_text_orange"
-                android:textSize="25sp" />
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_message_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/me_message"
+                    android:gravity="bottom"
+                    android:text="我的消息"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/me_tv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_message_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="bottom"
+                    android:text="8888"
+                    android:textColor="@color/color_text_orange"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+        </LinearLayout>
 
         <RelativeLayout
             android:id="@+id/rl_2"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_below="@id/area_1"
+            android:layout_below="@id/ll"
             android:layout_marginTop="10dp"
             android:background="#ffffff" >
 
@@ -203,7 +214,7 @@
             android:layout_below="@id/rl_4"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
-            android:background="@drawable/shape_button_orange"
+            android:background="@drawable/selector_button_orange"
             android:text="退出登录"
             android:textColor="#ffffff" />
     </RelativeLayout>
